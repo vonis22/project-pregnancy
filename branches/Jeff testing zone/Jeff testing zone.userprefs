@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\GyroscopeMovement.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\cubesDraaien.cs">
     <Files>
-      <File FileName="Assets\scripts\GyroscopeMovement.cs" Line="15" Column="3" />
-      <File FileName="Assets\scripts\cubesDraaien.cs" Line="38" Column="3" />
+      <File FileName="Assets\scripts\cubesDraaien.cs" Line="52" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
