@@ -15,9 +15,9 @@ public class moveBlock : MonoBehaviour {
 		//float xAxis = Input.acceleration.x;
 		//float zAxis = Input.acceleration.z;
 		//float yAxis = Input.acceleration.y;
-		Vector3 rotate = transform.rotation;
-
-		rotate = Input.acceleration;
+		//Vector3 rotate = transform.rotation;
+		transform.rotation = Input.gyro.attitude;
+		//rotate = Input.acceleration;
 
 		//transform.Rotate(xAxis, yAxis, zAxis);
 	
