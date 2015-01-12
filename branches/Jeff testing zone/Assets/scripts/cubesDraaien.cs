@@ -19,19 +19,9 @@ public class cubesDraaien : MonoBehaviour {
 		
 		//Inademen, hoogste waarden
 
-
-
 				Vector3 dir = Vector3.zero;
 				yWaarde = -Input.acceleration.y;
 				xWaarde = Input.acceleration.x;
-		
-		
-				if ((yWaarde <= 0.03f) && (yWaarde >= -0.03f)) {
-						yWaarde = 0.0f;
-				}
-				if ((xWaarde <= 0.03f) && (xWaarde >= -0.03f)) {
-							xWaarde = 0.0f;
-						}
 		
 				dir.x = yWaarde*360.0f;
 				dir.z = xWaarde*360.0f;
@@ -40,15 +30,5 @@ public class cubesDraaien : MonoBehaviour {
 
 				Debug.Log ("x"+Input.acceleration.y);
 				Debug.Log ("z"+Input.acceleration.x);
-				
-
-
 		}
-
 }
-
-
-
-	
-	
-
