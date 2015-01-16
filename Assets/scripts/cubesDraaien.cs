@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
+using System.Linq;
 
 
 public class cubesDraaien : MonoBehaviour {
@@ -10,7 +12,7 @@ public class cubesDraaien : MonoBehaviour {
 	public float xWaarde;
 	public float speed = 10.0f;
 
-	public float calTimer = 30.0f;
+	public float calTimer = 44.0f;
 	public bool gameRunning = false;
 	public float calibrating = 0.0f;
 	public bool starting = false;
@@ -20,16 +22,22 @@ public class cubesDraaien : MonoBehaviour {
 	//public List<float> minX = new List<float>();
 	public List<float> minY = new List<float>();
 
+	public float startWaardeY;
+	public bool startCheck = true;
+
 	//float currentX;
 	float currentY;
 	//float avgX;
-	float avgY;	
+	float avgMinY;
+	float avgMaxY;
 
 		
 		void Start()
 		{
 			starting = true;
 			repeating ();
+			
+			
 		}
 
 		void Update() 
@@ -43,7 +51,16 @@ public class cubesDraaien : MonoBehaviour {
 		//Inademen, hoogste waarden
 
 			Vector3 dir = Vector3.zero;
-			yWaarde = Input.acceleration.y;
+			
+			if (startWaardeY < 0)
+			{
+				yWaarde = Input.acceleration.y + startWaardeY;
+			}
+			else
+			{
+				yWaarde = Input.acceleration.y - startWaardeY;	
+			}
+
 			//xWaarde = Input.acceleration.x;
 	
 			//dir.x = yWaarde*360.0f;
@@ -65,9 +82,14 @@ public class cubesDraaien : MonoBehaviour {
 			{
 				CancelInvoke();
 				calTimer = 0;
+				//avgMinY = minY;
+				avgMinY = minY.Average();
+				Debug.Log(avgMinY);
+				avgMaxY = maxY.Average();
+				Debug.Log(avgMaxY);
 			}
 				//currentX = Input.acceleration.x;
-				currentY = Input.acceleration.y;
+				currentY = yWaarde;
 
 				//Debug.Log (maxX);
 				//Debug.Log (maxY);
@@ -86,8 +108,11 @@ public class cubesDraaien : MonoBehaviour {
 			//float tmpX = currentX;
 			float tmpY = currentY;
 
-			
-			
+		if (startCheck)
+		{
+			startWaardeY = Input.acceleration.y;
+			startCheck = false;
+		}
 
 			
 			
@@ -120,9 +145,11 @@ public class cubesDraaien : MonoBehaviour {
 		{
 			if (starting)
 			{
-			InvokeRepeating("calibration", 4.0f, 4.0f);
+			InvokeRepeating("calibration", 0.0f, 4.0f);
 			starting = false;
 			}
+
+
 		}
 
 
