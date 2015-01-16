@@ -3,15 +3,21 @@ using System.Collections;
 
 public class licht : MonoBehaviour
 {
-	public float Kleur = 0.0f;
+
+	public float Kleur =0.0f;
+	//6 t/m 11 kunnen weg gehaald worden. zijn geen mooie kleuren
+
 
 	void Start()
 	{
 
 	}
 
+
 	void Update()
 	{
+		InvokeRepeating("optellen", 1.0f, 20.0f);
+
 		//Rood
 		if(Kleur == 1)
 		{
