@@ -18,149 +18,149 @@ public class licht : MonoBehaviour
 			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 1);
 		}
 
-		if(Kleur == 11)
+		if(Kleur == 2)
 		{
 			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.9f);
 		}
 
-		if(Kleur == 12)
+		if(Kleur == 3)
 		{
 			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.8f);
 		}
 
-		if(Kleur == 13)
+		if(Kleur == 4)
 		{
 			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.7f);
 		}
 
-		if(Kleur == 14)
+		if(Kleur == 5)
 		{
 			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.6f);
 		}
 
-		if(Kleur == 15)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.5f);
-		}
-
-		if(Kleur == 16)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.4f);
-		}
-
-		if(Kleur == 17)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.3f);
-		}
-
-		if(Kleur == 18)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.2f);
-		}
-
-		if(Kleur == 19)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.1f);
-		}
+		//		if(Kleur == 15)
+		//		{
+		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.5f);
+		//		}
+		//
+		//		if(Kleur == 16)
+		//		{
+		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.4f);
+		//		}
+		//
+		//		if(Kleur == 17)
+		//		{
+		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.3f);
+		//		}
+		//
+		//		if(Kleur == 18)
+		//		{
+		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.2f);
+		//		}
+		//
+		//		if(Kleur == 19)
+		//		{
+		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.1f);
+		//		}
 
 		//Oranje
-		if(Kleur == 2)
+		if(Kleur == 6)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.1f);
 		}
 
-		if(Kleur == 21)
+		if(Kleur == 7)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.2f);
 		}
 
-		if(Kleur == 22)
+		if(Kleur == 8)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.3f);
 		}
 
-		if(Kleur == 23)
+		if(Kleur == 9)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.4f);
 		}
 
-		if(Kleur == 24)
+		if(Kleur == 10)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.5f);
 		}
 
-		if(Kleur == 25)
+		if(Kleur == 11)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.6f);
 		}
 
-		if(Kleur == 26)
+		if(Kleur == 12)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.7f);
 		}
 
-		if(Kleur == 27)
+		if(Kleur == 13)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.8f);
 		}
 
-		if(Kleur == 28)
+		if(Kleur == 14)
 		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
+			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.9f);
 		}
 
-		if(Kleur == 29)
+		if(Kleur == 15)
 		{
 			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
 		}
 
 		//Groen
-		if(Kleur == 3)
+		//		if(Kleur == 3)
+		//		{
+		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.1f);
+		//		}
+		//
+		//		if(Kleur == 31)
+		//		{
+		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.2f);
+		//		}
+		//
+		//		if(Kleur == 32)
+		//		{
+		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.3f);
+		//		}
+		//
+		//		if(Kleur == 33)
+		//		{
+		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.4f);
+		//		}
+		//
+		//		if(Kleur == 34)
+		//		{
+		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.5f);
+		//		}
+
+		if(Kleur == 16)
 		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
+			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.6f);
 		}
 
-		if(Kleur == 31)
+		if(Kleur == 17)
 		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
+			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.7f);
 		}
 
-		if(Kleur == 32)
+		if(Kleur == 18)
 		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
+			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.8f);
 		}
 
-		if(Kleur == 33)
+		if(Kleur == 19)
 		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
+			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.9f);
 		}
 
-		if(Kleur == 34)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
-
-		if(Kleur == 35)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
-
-		if(Kleur == 36)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
-
-		if(Kleur == 37)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
-
-		if(Kleur == 38)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
-
-		if(Kleur == 39)
+		if(Kleur == 20)
 		{
 			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
 		}
