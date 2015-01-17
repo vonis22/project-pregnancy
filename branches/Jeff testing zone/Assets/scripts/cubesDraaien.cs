@@ -13,7 +13,7 @@ public class cubesDraaien : MonoBehaviour {
 	public float speed = 10.0f;
 
 	public float calTimer = 44.0f;
-	public bool gameRunning = false;
+	public bool gameRunning = true;
 	public float calibrating = 0.0f;
 	public bool starting = false;
 
@@ -34,16 +34,18 @@ public class cubesDraaien : MonoBehaviour {
 		
 		void Start()
 		{
-			starting = true;
-			repeating ();
+		starting = true;	
+		repeating ();
 			
+				
 			
 		}
 
 		void Update() 
 		{
-			transform.rotation = Input.gyro.attitude;
 			gameRunning = true;
+			transform.rotation = Input.gyro.attitude;
+			
 			
 
 		//gemiddelde berekenen van 10 waardes, uitgaande van het feit dat de telefoon landscape op de buik ligt
@@ -84,9 +86,12 @@ public class cubesDraaien : MonoBehaviour {
 				calTimer = 0;
 				//avgMinY = minY;
 				avgMinY = minY.Average();
-				Debug.Log(avgMinY);
+
 				avgMaxY = maxY.Average();
-				Debug.Log(avgMaxY);
+
+				// Filteren van pieken door middel van de modus en een percentage er boven en onder
+
+				
 			}
 				//currentX = Input.acceleration.x;
 				currentY = yWaarde;
@@ -119,11 +124,11 @@ public class cubesDraaien : MonoBehaviour {
 
 			if (currentY < 0.0f)
 			{
-				minY.Add(tmpY);
+				minY.Add( Mathf.Round (tmpY * 10));
 			}
 			else
 			{
-				maxY.Add(tmpY);
+				maxY.Add( Mathf.Round (tmpY * 10));
 			}
 
 //			if (currentX < 0.0f)
