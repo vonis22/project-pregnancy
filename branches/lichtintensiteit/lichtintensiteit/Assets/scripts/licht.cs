@@ -5,6 +5,8 @@ public class licht : MonoBehaviour
 {
 
 	public float Kleur =0.0f;
+	public float colourTimer = 0.0f;
+	public float roundedColourTimer;
 	//6 t/m 11 kunnen weg gehaald worden. zijn geen mooie kleuren
 
 
@@ -16,6 +18,11 @@ public class licht : MonoBehaviour
 
 	void Update()
 	{
+		//Niels deze 2 regels zijn de timer, exclusief de debug.log
+		colourTimer += Time.deltaTime;
+		roundedColourTimer = Mathf.Floor (colourTimer);
+		Debug.Log (roundedColourTimer);
+
 		InvokeRepeating("optellen", 1.0f, 20.0f);
 
 		//Rood
