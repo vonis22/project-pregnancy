@@ -17,6 +17,8 @@ public class cubesDraaien : MonoBehaviour {
 	public float calibrating = 0.0f;
 	public bool starting = false;
 
+	public float vergrotingsFactor = 10.0f;
+
 	//public List<float> maxX = new List<float>(); 
 	public List<float> maxY = new List<float>();
 	//public List<float> minX = new List<float>();
@@ -36,9 +38,6 @@ public class cubesDraaien : MonoBehaviour {
 		{
 		starting = true;	
 		repeating ();
-			
-				
-			
 		}
 
 		void Update() 
@@ -115,20 +114,16 @@ public class cubesDraaien : MonoBehaviour {
 
 		if (startCheck)
 		{
-			startWaardeY = Input.acceleration.y;
+			startWaardeY = Input.acceleration.y * vergrotingsFactor;
 			startCheck = false;
 		}
-
-			
-			
-
 			if (currentY < 0.0f)
 			{
-				minY.Add( Mathf.Round (tmpY * 10));
+				minY.Add((tmpY * vergrotingsFactor));
 			}
 			else
 			{
-				maxY.Add( Mathf.Round (tmpY * 10));
+				maxY.Add((tmpY * vergrotingsFactor));
 			}
 
 //			if (currentX < 0.0f)
@@ -139,11 +134,6 @@ public class cubesDraaien : MonoBehaviour {
 //			{
 //				maxX.Add(tmpX);
 //			}
-
-			
-
-			
-
 		}
 
 		void repeating()
@@ -153,12 +143,26 @@ public class cubesDraaien : MonoBehaviour {
 			InvokeRepeating("calibration", 0.01f, 4.0f);
 			starting = false;
 			}
-
-
 		}
 
+		void OnGUI()
+		{
+			GUIStyle avgFont = new GUIStyle ();
+			avgFont.fontSize = 50;
+			avgFont.normal.textColor = Color.cyan;
+			
+			if (calTimer <= 0)
+			{
+			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "yMax "+avgMaxY.ToString(), avgFont);
+			GUI.Label(new Rect(Screen.width / 2 -350 ,Screen.height / 2-50 ,150 ,150), "yMin "+avgMinY.ToString(), avgFont);
+			}
+			else
+			{
+			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "startWaardeY "+startWaardeY.ToString(), avgFont);
+			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "currentY "+(currentY*10).ToString(), avgFont);
+			}
 
-
+		}
 
 
 
