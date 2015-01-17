@@ -145,7 +145,7 @@ public class cubesDraaien : MonoBehaviour {
 		{
 			if (starting)
 			{
-			InvokeRepeating("calibration", 0.0f, 4.0f);
+			InvokeRepeating("calibration", 0.01f, 4.0f);
 			starting = false;
 			}
 
