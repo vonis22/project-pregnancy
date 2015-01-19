@@ -7,9 +7,10 @@ using System.Linq;
 public class cubesDraaien : MonoBehaviour {
 
 	//tappen op telefoon voor starten
+	public GameObject playPlane;
+	public bool newPhase = true;
 
 	public float yWaarde;
-	public float xWaarde;
 	public float speed = 10.0f;
 
 	public float calTimer = 44.0f;
@@ -18,57 +19,31 @@ public class cubesDraaien : MonoBehaviour {
 	public bool starting = false;
 
 	public float vergrotingsFactor = 10.0f;
-
-	//public List<float> maxX = new List<float>(); 
-	public List<float> maxY = new List<float>();
-	//public List<float> minX = new List<float>();
-	public List<float> minY = new List<float>();
+	
+	public List<float> arrayAvgY = new List<float>();
 
 	public float startWaardeY;
 	public bool startCheck = true;
+	
+	public float currentY;
 
-	//float currentX;
-	float currentY;
-	//float avgX;
-	float avgMinY;
-	float avgMaxY;
-
+	public float avgY;
 		
 		void Start()
 		{
-		starting = true;	
-		repeating ();
+			starting = true;	
+			repeating ();
 		}
 
 		void Update() 
 		{
+			yWaarde = Input.acceleration.y;
 			gameRunning = true;
 			transform.rotation = Input.gyro.attitude;
-			
-			
 
-		//gemiddelde berekenen van 10 waardes, uitgaande van het feit dat de telefoon landscape op de buik ligt
-		//Uitademen, laagste waarden
-		//Inademen, hoogste waarden
-
-			Vector3 dir = Vector3.zero;
-			
-			if (startWaardeY < 0)
-			{
-				yWaarde = Input.acceleration.y + startWaardeY;
-			}
-			else
-			{
-				yWaarde = Input.acceleration.y - startWaardeY;	
-			}
-
-			//xWaarde = Input.acceleration.x;
-	
-			//dir.x = yWaarde*360.0f;
-			dir.z = xWaarde*360.0f;
-			dir *= Time.deltaTime;
-			transform.Rotate(dir * speed);
-
+			arrayAvgY.Add (currentY);
+			avgY = arrayAvgY.Average();
+					
 			if (gameRunning)
 			{
 				calTimer -= Time.deltaTime;
@@ -83,64 +58,36 @@ public class cubesDraaien : MonoBehaviour {
 			{
 				CancelInvoke();
 				calTimer = 0;
-				//avgMinY = minY;
-				avgMinY = minY.Average();
 
-				avgMaxY = maxY.Average();
+				if(newPhase)
+				{
+					Instantiate(playPlane);
+					newPhase = false;
+				}
 
-				// Filteren van pieken door middel van de modus en een percentage er boven en onder
-
-				
 			}
 				//currentX = Input.acceleration.x;
-				currentY = yWaarde;
+				currentY = yWaarde * vergrotingsFactor;
 
-				//Debug.Log (maxX);
-				//Debug.Log (maxY);
-				//print(maxX);
-				
-				//Debug.Log (calTimer);
-				//Debug.Log (calibrating);
-				//Debug.Log ("x"+Input.acceleration.y *100);
-				//Debug.Log ("z"+Input.acceleration.x *100);
 				//RenderSettings.ambientLight
+//				if (calTimer > 0)
+//				{
+//					calibration ();
+//				}
 		}
-		
-		//1x aangeroepen in 4 sec
-		void calibration()
-		{
-			//float tmpX = currentX;
-			float tmpY = currentY;
+	
+//		void calibration()
+//		{
+//			//float tmpX = currentX;
 
-		if (startCheck)
-		{
-			startWaardeY = Input.acceleration.y * vergrotingsFactor;
-			startCheck = false;
-		}
-			if (currentY < 0.0f)
-			{
-				minY.Add((tmpY * vergrotingsFactor));
-			}
-			else
-			{
-				maxY.Add((tmpY * vergrotingsFactor));
-			}
-
-//			if (currentX < 0.0f)
-//			{
-//				minX.Add (tmpX);
-//			}
-//			else
-//			{
-//				maxX.Add(tmpX);
-//			}
-		}
+//
+//		}
 
 		void repeating()
 		{
 			if (starting)
 			{
-			InvokeRepeating("calibration", 0.01f, 4.0f);
+			//InvokeRepeating("calibration", 0.01f, 4.0f);
 			starting = false;
 			}
 		}
@@ -151,16 +98,16 @@ public class cubesDraaien : MonoBehaviour {
 			avgFont.fontSize = 50;
 			avgFont.normal.textColor = Color.cyan;
 			
-			if (calTimer <= 0)
-			{
-			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "yMax "+avgMaxY.ToString(), avgFont);
-			GUI.Label(new Rect(Screen.width / 2 -350 ,Screen.height / 2-50 ,150 ,150), "yMin "+avgMinY.ToString(), avgFont);
-			}
-			else
-			{
-			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "startWaardeY "+startWaardeY.ToString(), avgFont);
-			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "currentY "+(currentY*10).ToString(), avgFont);
-			}
+//			if (calTimer <= 0)
+//			{
+//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "yMax "+avgMaxY.ToString(), avgFont);
+//			GUI.Label(new Rect(Screen.width / 2 -350 ,Screen.height / 2-50 ,150 ,150), "yMin "+avgMinY.ToString(), avgFont);
+//			}
+//			else
+//			{
+//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "startWaardeY "+startWaardeY.ToString(), avgFont);
+//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "currentY "+(currentY*10).ToString(), avgFont);
+//			}
 
 		}
 
