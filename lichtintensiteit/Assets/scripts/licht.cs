@@ -3,11 +3,16 @@ using System.Collections;
 
 public class licht : MonoBehaviour
 {
-
-	public float Kleur =0.0f;
+	// Alpha kanaal van de kleur moet gestart worden op het moment dat 1 van de timers (BreathOut)s 0 wordt,
+	// Hierna moet hij hervat worden als de andere (BreathIn) time 0 is.
+	public float kleur =0.0f;
 	public float colourTimer = 0.0f;
 	public float roundedColourTimer;
-	//6 t/m 11 kunnen weg gehaald worden. zijn geen mooie kleuren
+	public float r = 0.0f;
+	public float g = 0.0f;
+	public float b = 0.0f;
+	public float a = 0.0f;
+	//6 t/m 11 kunnen weg gehaald worden. zijn geen mooie roundedColourTimeren
 
 
 	void Start()
@@ -18,164 +23,95 @@ public class licht : MonoBehaviour
 
 	void Update()
 	{
+
 		//Niels deze 2 regels zijn de timer, exclusief de debug.log
-		colourTimer += Time.deltaTime;
-		roundedColourTimer = Mathf.Floor (colourTimer);
-		Debug.Log (roundedColourTimer);
+		kleur += Time.deltaTime;
+		roundedColourTimer = Mathf.Floor (kleur);
+		//Debug.Log (roundedColourTimer);
 
 		InvokeRepeating("optellen", 1.0f, 20.0f);
-
-		//Rood
-		if(Kleur == 1)
+		renderer.material.color = new Color (r/255, g/255, b/255, 1);
+		//Kleur verandering
+		if( roundedColourTimer >= 2 && roundedColourTimer < 7)
 		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 1);
+			if (r < 220) 
+			{
+				r++;
+			}
+			else
+			{
+				r--;
+			}
+			if (g < 0) 
+			{
+				g++;
+			}
+			else {
+				g--;
+			}
+			if (b < 0) 
+			{
+				b++;
+			}
+			else {
+				b--;
+			}
+
+		} 
+		if( roundedColourTimer >= 7 && roundedColourTimer  < 11)
+		{
+			if (r < 255) 
+			{
+				r++;
+			}
+			else
+			{
+				r--;
+			}
+			if (g < 69) 
+			{
+				g++;
+			}
+			else {
+				g--;
+			}
+			if (b < 0) 
+			{
+				b++;
+			}
+			else {
+				b--;
+			}
+			
+		} 
+
+		if( roundedColourTimer >= 11)
+		{
+			if (r < 0) 
+			{
+				r++;
+			}
+			else
+			{
+				r--;
+			}
+			if (g < 255) 
+			{
+				g++;
+			}
+			else {
+				g--;
+			}
+			if (b < 0) 
+			{
+				b++;
+			}
+			else {
+				b--;
+			}
+			
 		}
 
-		if(Kleur == 2)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.9f);
-		}
 
-		if(Kleur == 3)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.8f);
-		}
-
-		if(Kleur == 4)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.7f);
-		}
-
-		if(Kleur == 5)
-		{
-			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.6f);
-		}
-
-		//		if(Kleur == 15)
-		//		{
-		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.5f);
-		//		}
-		//
-		//		if(Kleur == 16)
-		//		{
-		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.4f);
-		//		}
-		//
-		//		if(Kleur == 17)
-		//		{
-		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.3f);
-		//		}
-		//
-		//		if(Kleur == 18)
-		//		{
-		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.2f);
-		//		}
-		//
-		//		if(Kleur == 19)
-		//		{
-		//			renderer.material.color = new Color (255.0f/255, 0.0f/255, 0.0f/255, 0.1f);
-		//		}
-
-		//Oranje
-		if(Kleur == 6)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.1f);
-		}
-
-		if(Kleur == 7)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.2f);
-		}
-
-		if(Kleur == 8)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.3f);
-		}
-
-		if(Kleur == 9)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.4f);
-		}
-
-		if(Kleur == 10)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.5f);
-		}
-
-		if(Kleur == 11)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.6f);
-		}
-
-		if(Kleur == 12)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.7f);
-		}
-
-		if(Kleur == 13)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.8f);
-		}
-
-		if(Kleur == 14)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 0.9f);
-		}
-
-		if(Kleur == 15)
-		{
-			renderer.material.color = new Color (255.0f/255, 127.0f/255, 36.0f/255, 1);
-		}
-
-		//Groen
-		//		if(Kleur == 3)
-		//		{
-		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.1f);
-		//		}
-		//
-		//		if(Kleur == 31)
-		//		{
-		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.2f);
-		//		}
-		//
-		//		if(Kleur == 32)
-		//		{
-		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.3f);
-		//		}
-		//
-		//		if(Kleur == 33)
-		//		{
-		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.4f);
-		//		}
-		//
-		//		if(Kleur == 34)
-		//		{
-		//			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.5f);
-		//		}
-
-		if(Kleur == 16)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.6f);
-		}
-
-		if(Kleur == 17)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.7f);
-		}
-
-		if(Kleur == 18)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.8f);
-		}
-
-		if(Kleur == 19)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 0.9f);
-		}
-
-		if(Kleur == 20)
-		{
-			renderer.material.color = new Color (0.0f/255, 255.0f/255, 0.0f/255, 1);
-		}
 	}
 }
