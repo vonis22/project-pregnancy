@@ -40,9 +40,11 @@ public class cubesDraaien : MonoBehaviour {
 			yWaarde = Input.acceleration.y;
 			gameRunning = true;
 			transform.rotation = Input.gyro.attitude;
-
+			
 			arrayAvgY.Add (currentY);
 			avgY = arrayAvgY.Average();
+
+			
 					
 			if (gameRunning)
 			{

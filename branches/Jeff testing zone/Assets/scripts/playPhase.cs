@@ -17,6 +17,7 @@ public class playPhase : MonoBehaviour {
 	public float breathOutTimer = 0.0f;
 	public float fullBreath = 0.0f;
 
+
 	void Start ()
 	{
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
@@ -25,8 +26,6 @@ public class playPhase : MonoBehaviour {
 
 	void Update () 
 	{
-		//print (script.avgY);
-
 			float tmpY = script.currentY;
 			
 			if (script.currentY < script.avgY)
@@ -35,7 +34,8 @@ public class playPhase : MonoBehaviour {
 				minY.Add(tmpY); //
 				breathOutTimer += Time.deltaTime;
 				breathInput.Add(breathInTimer);
-				breathInTimer = 0.0f; //Wordt
+				breathInTimer = 0.0f;
+
 			}
 			else
 			{
@@ -44,6 +44,7 @@ public class playPhase : MonoBehaviour {
 				breathInTimer += Time.deltaTime;
 				breathOutput.Add(breathOutTimer);
 				breathOutTimer = 0.0f;
+				
 			}
 
 		if(breathOutput.Last() != 0)
