@@ -21,6 +21,11 @@ public class licht : MonoBehaviour
 	public float breathOutTimer = 0.0f;
 	public float fullBreath;
 
+	public AudioClip langzamer;
+	public AudioClip sneller;
+	public AudioClip ademIn;
+	public AudioClip ademUit;
+
 
 	void Start()
 	{
@@ -36,10 +41,13 @@ public class licht : MonoBehaviour
 	{
 		renderer.material.color = new Color (r/255, g/255, b/255, lightIntensity/100);
 
-		Debug.Log (method.fullBreathList.Last ());
+		//Debug.Log (method.fullBreathList.Last ());
 		//Kleur verandering
 		if(method.fullBreathList.Last () <= 2 || method.fullBreathList.Last () >= 6)
 		{
+			audio.Stop();
+			audio.clip = langzamer;
+			audio.Play ();
 			if (r < 220) 
 			{
 				r++;
@@ -67,6 +75,13 @@ public class licht : MonoBehaviour
 
 		if(method.fullBreathList.Last () <= 3 && method.fullBreathList.Last () > 2 || method.fullBreathList.Last () >= 5 && method.fullBreathList.Last () < 6)
 		{
+			if (canPlay)
+			{
+			audio.Stop();
+			audio.clip = sneller;
+			audio.Play ();
+
+			}
 			if (r < 255) 
 			{
 				r++;
@@ -94,6 +109,9 @@ public class licht : MonoBehaviour
 
 		if(method.fullBreathList.Last () >= 3 && method.fullBreathList.Last () < 5)
 		{
+			audio.Stop();
+			audio.clip = ademIn;
+			audio.Play ();
 			if (r < 0) 
 			{
 				r++;
