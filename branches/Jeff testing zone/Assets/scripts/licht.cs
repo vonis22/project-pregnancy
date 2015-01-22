@@ -26,6 +26,9 @@ public class licht : MonoBehaviour
 	public AudioClip ademIn;
 	public AudioClip ademUit;
 
+	public bool canPlaySound = true;
+	public float canPlaySoundTimer = 0.0f;
+
 
 	void Start()
 	{
@@ -75,13 +78,25 @@ public class licht : MonoBehaviour
 
 		if(method.fullBreathList.Last () <= 3 && method.fullBreathList.Last () > 2 || method.fullBreathList.Last () >= 5 && method.fullBreathList.Last () < 6)
 		{
-			if (canPlay)
+			Debug.Log (canPlaySound);
+
+			if (canPlaySound)
 			{
-			audio.Stop();
 			audio.clip = sneller;
 			audio.Play ();
-
+			canPlaySound = false;
 			}
+
+			if (canPlaySoundTimer <= 4.0f && canPlaySound == false) 
+			{
+				canPlaySoundTimer += 1.0f * Time.deltaTime;
+			}
+			else
+			{
+				canPlaySoundTimer = 0.0f;
+				canPlaySound = true;
+			}
+
 			if (r < 255) 
 			{
 				r++;
