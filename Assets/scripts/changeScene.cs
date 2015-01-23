@@ -3,8 +3,23 @@ using System.Collections;
 
 public class changeScene : MonoBehaviour {
 	
-	public void ChangeToScene (string SceneToChangeTo)
+	public void StartGame (string StartGame)
 	{
-		Application.LoadLevel (SceneToChangeTo);
+		Application.LoadLevel (StartGame);
 	}
+
+	public void StartOptions (string Options)
+	{
+		Application.LoadLevel (Options);
+	}
+
+	public void StartInstructions (string Instructions)
+	{
+		Application.LoadLevel (Instructions);
+	}
+
+	/*public void SluitApp ()
+	{
+		Application.Quit();
+	}*/
 }

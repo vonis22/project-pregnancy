@@ -184,7 +184,7 @@ public class licht : MonoBehaviour
 		GUIStyle avgFont = new GUIStyle ();
 		avgFont.fontSize = 50;
 		avgFont.normal.textColor = Color.cyan;
-		GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Alpha "+lightIntensity.ToString(), avgFont);
+		//GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Alpha "+lightIntensity.ToString(), avgFont);
 	}
 
 }

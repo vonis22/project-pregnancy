@@ -102,8 +102,8 @@ public class cubesDraaien : MonoBehaviour {
 			
 			if (calTimer > 0)
 			{
-			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Timer "+calTimer.ToString(), avgFont);
-			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "avgY "+avgY.ToString(), avgFont);
+			//GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Timer "+calTimer.ToString(), avgFont);
+			//GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "avgY "+avgY.ToString(), avgFont);
 			}
 
 		}
