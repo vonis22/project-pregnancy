@@ -7,19 +7,17 @@ public class licht : MonoBehaviour
 {
 	// Alpha kanaal van de kleur moet gestart worden op het moment dat 1 van de timers (BreathOut)s 0 wordt,
 	// Hierna moet hij hervat worden als de andere (BreathIn) time 0 is.
-	public float kleur =0.0f;
-	public float colourTimer = 0.0f;
 	public float r = 0.0f;
 	public float g = 0.0f;
 	public float b = 0.0f;
-	public float a = 0.0f;
 
 	public playPhase method;
-	public float lightIntensity = 50.0f;
+	public float lightIntensity; 
 
 	public float breathInTimer = 0.0f;
 	public float breathOutTimer = 0.0f;
 	public float fullBreath;
+	public bool brightest;
 
 	public AudioClip langzamer;
 	public AudioClip sneller;
@@ -37,6 +35,8 @@ public class licht : MonoBehaviour
 		breathInTimer = method.breathInTimer;
 		breathOutTimer = method.breathOutTimer;
 		fullBreath = method.fullBreathList.Last();
+		lightIntensity = 0.0f;
+		brightest = true;
 	}
 
 
@@ -48,10 +48,10 @@ public class licht : MonoBehaviour
 		//Kleur verandering
 		if(method.fullBreathList.Last () <= 2 || method.fullBreathList.Last () >= 6)
 		{
-			audio.Stop();
-			audio.clip = langzamer;
-			audio.Play ();
-			if (r < 220) 
+//			audio.Stop();
+//			audio.clip = langzamer;
+//			audio.Play ();
+			if (r < 255) 
 			{
 				r++;
 			}
@@ -80,12 +80,12 @@ public class licht : MonoBehaviour
 		{
 			Debug.Log (canPlaySound);
 
-			if (canPlaySound)
-			{
-			audio.clip = sneller;
-			audio.Play ();
-			canPlaySound = false;
-			}
+//			if (canPlaySound)
+//			{
+//			audio.clip = sneller;
+//			audio.Play ();
+//			canPlaySound = false;
+//			}
 
 			if (canPlaySoundTimer <= 4.0f && canPlaySound == false) 
 			{
@@ -124,9 +124,7 @@ public class licht : MonoBehaviour
 
 		if(method.fullBreathList.Last () >= 3 && method.fullBreathList.Last () < 5)
 		{
-			audio.Stop();
-			audio.clip = ademIn;
-			audio.Play ();
+
 			if (r < 0) 
 			{
 				r++;
@@ -152,15 +150,41 @@ public class licht : MonoBehaviour
 			
 		}
 
+
 		//De lichtintensiteit
-		if (lightIntensity <= 100)
+		if (lightIntensity >= 100) 
 		{
-			lightIntensity += method.breathInTimer *10 * Time.deltaTime; 
-		}
-		
-		if (lightIntensity >= 0)
+			audio.Stop();
+			audio.clip = ademUit;
+			audio.Play ();
+			brightest = false;
+
+
+		} 
+		else if ( lightIntensity <= 0)
 		{
-			lightIntensity -= method.breathOutTimer *10 * Time.deltaTime;
+			brightest = true;
+			audio.Stop();
+			audio.clip = ademIn;
+			audio.Play ();
 		}
+
+		if (brightest == true) 
+		{
+			lightIntensity += Time.deltaTime * 25;
+		} 
+		else 
+		{
+			lightIntensity -= Time.deltaTime *25;
+		}
+
+}
+	void OnGUI()
+	{
+		GUIStyle avgFont = new GUIStyle ();
+		avgFont.fontSize = 50;
+		avgFont.normal.textColor = Color.cyan;
+		GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Alpha "+lightIntensity.ToString(), avgFont);
 	}
+
 }
