@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System;
 using System.Linq;
-
+using System.
 public class playPhase : MonoBehaviour {
-	
+
 	public cubesDraaien script;
 
 	public List<float> maxY = new List<float>();
@@ -17,12 +17,15 @@ public class playPhase : MonoBehaviour {
 	public float breathOutTimer = 0.0f;
 	public float fullBreath = 0.0f;
 
+	float brightness;
 
 
 	void Start ()
 	{
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
 		script = mainHandler.GetComponent<cubesDraaien>();
+		brightness = 1.0f;
+
 	}
 
 	void Update () 
@@ -60,5 +63,11 @@ public class playPhase : MonoBehaviour {
 			breathInput.Clear ();
 		}
 
+	}
+	void OnGUI() {
+		GUIStyle avgFont = new GUIStyle ();
+		avgFont.fontSize = 50;
+		avgFont.normal.textColor = Color.cyan;
+	GUI.Label(new Rect(Screen.width / 2 -350 ,Screen.height / 2-50 ,150 ,150), "fullBreath "+ fullBreathList.Last().ToString(), avgFont);
 	}
 }

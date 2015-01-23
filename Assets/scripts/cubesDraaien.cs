@@ -9,7 +9,6 @@ public class cubesDraaien : MonoBehaviour {
 	//tappen op telefoon voor starten
 	public GameObject playPlane;
 	public bool newPhase = true;
-
 	public float yWaarde;
 	public float speed = 10.0f;
 
@@ -24,7 +23,7 @@ public class cubesDraaien : MonoBehaviour {
 
 	public float startWaardeY;
 	public bool startCheck = true;
-	
+	//public AudioClip music1;
 	public float currentY;
 
 	public float avgY;
@@ -37,6 +36,7 @@ public class cubesDraaien : MonoBehaviour {
 
 		void Update() 
 		{
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 			yWaarde = Input.acceleration.y;
 			gameRunning = true;
 			transform.rotation = Input.gyro.attitude;
@@ -100,16 +100,11 @@ public class cubesDraaien : MonoBehaviour {
 			avgFont.fontSize = 50;
 			avgFont.normal.textColor = Color.cyan;
 			
-//			if (calTimer <= 0)
-//			{
-//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "yMax "+avgMaxY.ToString(), avgFont);
-//			GUI.Label(new Rect(Screen.width / 2 -350 ,Screen.height / 2-50 ,150 ,150), "yMin "+avgMinY.ToString(), avgFont);
-//			}
-//			else
-//			{
-//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "startWaardeY "+startWaardeY.ToString(), avgFont);
-//			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "currentY "+(currentY*10).ToString(), avgFont);
-//			}
+			if (calTimer > 0)
+			{
+			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2+50 ,150 ,150), "Timer "+calTimer.ToString(), avgFont);
+			GUI.Label(new Rect(Screen.width / 2 - 350 ,Screen.height / 2-50 ,150 ,150), "avgY "+avgY.ToString(), avgFont);
+			}
 
 		}
 
