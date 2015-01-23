@@ -25,7 +25,6 @@ public class playPhase : MonoBehaviour {
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
 		script = mainHandler.GetComponent<cubesDraaien>();
 		brightness = 1.0f;
-
 	}
 
 	void Update () 
