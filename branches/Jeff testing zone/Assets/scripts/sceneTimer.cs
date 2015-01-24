@@ -12,7 +12,7 @@ public class sceneTimer : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0) 
 		{
-			ChangeToScene("firstTimeStartup");
+			ChangeToScene("MainMenu");
 				}
 	}
 				public void ChangeToScene (string SceneToChangeTo)
