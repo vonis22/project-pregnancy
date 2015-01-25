@@ -13,7 +13,7 @@ public class playPhase : MonoBehaviour {
 	public List<float> breathOutput = new List<float>();
 	public List<float> fullBreathList = new List<float>();
 
-	public float playTimer = 60.0f;
+	public float playTimer;
 	public float breathInTimer = 0.0f;
 	public float breathOutTimer = 0.0f;
 	public float fullBreath = 0.0f;
@@ -27,7 +27,7 @@ public class playPhase : MonoBehaviour {
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
 		script = mainHandler.GetComponent<cubesDraaien>();
 		brightness = 1.0f;
-		//playTimer = UIInputField.outcome * 60;
+		playTimer = UIInputField.outcome * 60;
 	}
 
 	void Update () 
