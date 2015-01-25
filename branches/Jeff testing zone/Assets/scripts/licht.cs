@@ -179,6 +179,18 @@ public class licht : MonoBehaviour
 			lightIntensity -= Time.deltaTime *25;
 		}
 
+		//geluid zachter/harder maken
+		if (lightIntensity >=100 && (method.fullBreathList.Last () <= 2 || method.fullBreathList.Last () >= 6))
+		{
+			audio.volume += 20.0f/100;
+		}
+		
+		if( lightIntensity >=100 && (method.fullBreathList.Last () >= 3 && method.fullBreathList.Last () < 5))
+		{
+			audio.volume -= 20.0f/100;
+		}
+		//print (audio.volume);
+
 }
 	void OnGUI()
 	{

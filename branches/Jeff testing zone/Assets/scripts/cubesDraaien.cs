@@ -15,7 +15,7 @@ public class cubesDraaien : MonoBehaviour {
 
 	public float calTimer = 44.0f;
 	public bool gameRunning = true;
-	public float calibrating = 0.0f; //wordt niet gebruikt
+	public float calibrating = 0.0f;
 	public bool starting = false;
 
 	public float vergrotingsFactor = 10.0f;
@@ -37,6 +37,10 @@ public class cubesDraaien : MonoBehaviour {
 
 		void Update() 
 		{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			ChangeToScene("MainMenu");
+		}
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 			yWaarde = Input.acceleration.y;
 			gameRunning = true;
@@ -59,7 +63,6 @@ public class cubesDraaien : MonoBehaviour {
 
 			if (calTimer <= 0)
 			{
-				CancelInvoke();
 				calTimer = 0;
 
 				if(newPhase)
@@ -85,6 +88,10 @@ public class cubesDraaien : MonoBehaviour {
 
 //
 //		}
+	public void ChangeToScene (string sceneToChangeTo)
+	{
+		Application.LoadLevel (sceneToChangeTo);
+	}
 
 		void repeating()
 		{

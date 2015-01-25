@@ -13,11 +13,12 @@ public class playPhase : MonoBehaviour {
 	public List<float> breathOutput = new List<float>();
 	public List<float> fullBreathList = new List<float>();
 
-	public float playTimer;
+	public float playTimer = 60.0f;
 	public float breathInTimer = 0.0f;
 	public float breathOutTimer = 0.0f;
 	public float fullBreath = 0.0f;
 
+	float touchTimer = 2;
 	float brightness;
 
 
@@ -26,13 +27,23 @@ public class playPhase : MonoBehaviour {
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
 		script = mainHandler.GetComponent<cubesDraaien>();
 		brightness = 1.0f;
-		playTimer = UIInputField.outcome * 60;
+		//playTimer = UIInputField.outcome * 60;
 	}
 
 	void Update () 
 	{
+
+		if (Input.GetMouseButton(0)) {
+
+			touchTimer-=Time.deltaTime;
+			print (touchTimer);
+				}
+		if (Input.GetMouseButtonUp(0))
+		{
+			touchTimer = 2.0f;
+		}
 		playTimer -= Time.deltaTime;
-		if (playTimer < 0) 
+		if (playTimer < 0 || touchTimer < 0) 
 		{
 			ChangeToScene();
 				}
