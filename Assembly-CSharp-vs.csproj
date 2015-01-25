@@ -59,6 +59,7 @@
      <Compile Include="Assets\scripts\playPhase.cs" />
      <Compile Include="Assets\scripts\pressButton.cs" />
      <Compile Include="Assets\scripts\sceneTimer.cs" />
+     <Compile Include="Assets\scripts\shutDown.cs" />
      <Compile Include="Assets\scripts\timePlaySession.cs" />
      <None Include="Assets\Editor Default Resources\GraphicalObjectProfiler\ObjectProfilerShader.shader" />
  <Reference Include="UnityEngine.UI">
