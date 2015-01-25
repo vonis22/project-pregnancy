@@ -9,7 +9,7 @@ public class UIInputField : MonoBehaviour
 	public changeScene script;
 	bool Error = false;
 	public float errorTimer;
-	public float outcome;
+	public static float outcome;
 	public string aantal;
 
 	// Use this for initialization
