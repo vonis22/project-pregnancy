@@ -12,6 +12,7 @@ public class cubesDraaien : MonoBehaviour {
 	public float yWaarde;
 	public float speed = 10.0f;
 
+
 	public float calTimer = 44.0f;
 	public bool gameRunning = true;
 	public float calibrating = 0.0f;
