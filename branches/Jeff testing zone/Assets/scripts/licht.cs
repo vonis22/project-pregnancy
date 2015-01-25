@@ -19,8 +19,8 @@ public class licht : MonoBehaviour
 	public float fullBreath;
 	public bool brightest;
 
-	public AudioClip langzamer;
-	public AudioClip sneller;
+	//public AudioClip langzamer;
+	//public AudioClip sneller;
 	public AudioClip ademIn;
 	public AudioClip ademUit;
 
@@ -46,11 +46,11 @@ public class licht : MonoBehaviour
 
 		//Debug.Log (method.fullBreathList.Last ());
 		//Kleur verandering
+
+		//Rood
 		if(method.fullBreathList.Last () <= 2 || method.fullBreathList.Last () >= 6)
 		{
-//			audio.Stop();
-//			audio.clip = langzamer;
-//			audio.Play ();
+			//audio.volume+=0.1f;
 			if (r < 255) 
 			{
 				r++;
@@ -75,7 +75,7 @@ public class licht : MonoBehaviour
 			}
 
 		} 
-
+		//Oranje
 		if(method.fullBreathList.Last () <= 3 && method.fullBreathList.Last () > 2 || method.fullBreathList.Last () >= 5 && method.fullBreathList.Last () < 6)
 		{
 			Debug.Log (canPlaySound);
@@ -121,9 +121,10 @@ public class licht : MonoBehaviour
 			}
 			
 		} 
-
+		//Groen
 		if(method.fullBreathList.Last () >= 3 && method.fullBreathList.Last () < 5)
 		{
+			//audio.volume-=0.5f;
 
 			if (r < 0) 
 			{
