@@ -13,6 +13,7 @@ public class playPhase : MonoBehaviour {
 	public List<float> breathOutput = new List<float>();
 	public List<float> fullBreathList = new List<float>();
 
+	public float playTimer;
 	public float breathInTimer = 0.0f;
 	public float breathOutTimer = 0.0f;
 	public float fullBreath = 0.0f;
@@ -29,6 +30,7 @@ public class playPhase : MonoBehaviour {
 
 	void Update () 
 	{
+		playTimer -= Time.deltaTime;
 			float tmpY = script.currentY;
 			
 			if (script.currentY < script.avgY)
