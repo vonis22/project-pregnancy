@@ -26,11 +26,16 @@ public class playPhase : MonoBehaviour {
 		GameObject mainHandler = GameObject.FindGameObjectWithTag("MainCamera");
 		script = mainHandler.GetComponent<cubesDraaien>();
 		brightness = 1.0f;
+		playTimer = UIInputField.outcome * 60;
 	}
 
 	void Update () 
 	{
 		playTimer -= Time.deltaTime;
+		if (playTimer < 0) 
+		{
+			ChangeToScene();
+				}
 			float tmpY = script.currentY;
 			
 			if (script.currentY < script.avgY)
@@ -64,6 +69,10 @@ public class playPhase : MonoBehaviour {
 			breathInput.Clear ();
 		}
 
+	}
+	public void ChangeToScene ()
+	{
+		Application.LoadLevel ("MainMenu");
 	}
 	void OnGUI() {
 		GUIStyle avgFont = new GUIStyle ();
