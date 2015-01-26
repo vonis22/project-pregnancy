@@ -68,13 +68,13 @@ public class playPhase : MonoBehaviour {
 				
 			}
 
-		if(breathOutput.Last() != 0)
+		if(breathOutput.Last() > 0.5f)
 		{
 			fullBreathList.Add (breathOutput.Last());
 			breathOutput.Clear (); //Maakt de array leeg
 		}
 
-		if(breathInput.Last() != 0)
+		if(breathInput.Last() > 0.5f)
 		{
 			fullBreathList.Add (breathInput.Last());
 			breathInput.Clear ();

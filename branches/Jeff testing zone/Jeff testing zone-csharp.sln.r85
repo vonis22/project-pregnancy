@@ -1,9 +1,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{1C407969-1436-2E06-5228-19CEB6049A56}") = "Jeff testing zone", "Assembly-CSharp.csproj", "{8718F69F-870E-FABF-96F4-A92D4299F046}"
+Project("{1C407969-1436-2E06-5228-19CEB6049A56}") = "Jeff testing zone", "Assembly-CSharp-vs.csproj", "{8718F69F-870E-FABF-96F4-A92D4299F046}"
 EndProject
-Project("{1C407969-1436-2E06-5228-19CEB6049A56}") = "Jeff testing zone", "Assembly-CSharp-Editor.csproj", "{BA226AC6-B317-9AC2-A9CD-CCBDD6B0BE72}"
+Project("{1C407969-1436-2E06-5228-19CEB6049A56}") = "Jeff testing zone", "Assembly-CSharp-Editor-vs.csproj", "{BA226AC6-B317-9AC2-A9CD-CCBDD6B0BE72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
-=======
-																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> .r86
+																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
