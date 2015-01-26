@@ -180,14 +180,20 @@ public class licht : MonoBehaviour
 		}
 
 		//geluid zachter/harder maken
+		//rood
 		if (lightIntensity >=100 && (method.fullBreathList.Last () <= 2 || method.fullBreathList.Last () >= 6))
 		{
 			audio.volume += 20.0f/100;
 		}
-		
+		//groen
 		if( lightIntensity >=100 && (method.fullBreathList.Last () >= 3 && method.fullBreathList.Last () < 5))
 		{
-			audio.volume -= 20.0f/100;
+			audio.volume -= 10.0f/100;
+		}
+		//oranje
+		if( lightIntensity >=100 && (method.fullBreathList.Last () <= 3 && method.fullBreathList.Last () > 2 || method.fullBreathList.Last () >= 5 && method.fullBreathList.Last () < 6))
+		{
+			audio.volume -= 10.0f/100;
 		}
 		//print (audio.volume);
 
