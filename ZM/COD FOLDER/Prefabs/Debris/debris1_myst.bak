@@ -1,0 +1,48 @@
+iwmap 4
+"000_Global" flags  active
+"The Map" flags 
+// entity 0
+{
+"classname" "worldspawn"
+}
+// entity 1
+{
+"script_noteworthy" "jiggle"
+"script_fxid" "large_ceiling_dust"
+"script_firefx" "poltergeist"
+"targetname" "debris1"
+"spawnflags" "1"
+"origin" "8.0 16.0 80.0"
+"script_linkto" "1"
+"model" "foliage_cod5_pine_branch01_bare"
+"classname" "script_model"
+}
+// entity 2
+{
+"origin" "8.0 8.0 24.0"
+"script_linkname" "1"
+"classname" "script_struct"
+}
+// entity 3
+{
+"target" "debris1"
+"zombie_cost" "1500"
+"targetname" "zombie_debris"
+"classname" "trigger_use"
+// brush 0
+{
+ ( -16 16 72 ) ( -24 16 72 ) ( -24 0 72 ) trigger 64 64 -40 0 0 0 lightmap_gray 16384 16384 -40 0 0 0
+ ( -24 8 152 ) ( -24 24 152 ) ( -16 24 152 ) trigger 64 64 -40 0 0 0 lightmap_gray 16384 16384 -40 0 0 0
+ ( -24 -64 72 ) ( -16 -64 72 ) ( -16 -64 64 ) trigger 64 64 -40 -40 0 0 lightmap_gray 16384.014 16384 -40 -40 0 0
+ ( 0 0 88 ) ( 0 16 88 ) ( 0 16 80 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
+ ( -16 72 72 ) ( -24 72 72 ) ( -24 72 64 ) trigger 64 64 -40 -40 0 0 lightmap_gray 16384 16384.023 -40 -40 0 0
+ ( -24 16 72 ) ( -24 0 72 ) ( -24 0 64 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
+}
+}
+// entity 4
+{
+"origin" "-8.0 80.0 64.0"
+"export" "1"
+"model" "char_ger_wrmcht_fullbody1"
+"classname" "actor_axis_zombie_ger_ber_sshonor"
+}
