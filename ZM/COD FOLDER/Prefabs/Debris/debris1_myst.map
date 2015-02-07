@@ -3,23 +3,35 @@ iwmap 4
 "The Map" flags 
 // entity 0
 {
+"targetname" "debris1"
+"script_linkto" "1"
 "classname" "worldspawn"
+// brush 0
+{
+ ( 16 74 72 ) ( 14 74 72 ) ( 14 -4 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 14 -4 152 ) ( 14 74 152 ) ( 16 74 152 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 30 -254 88 ) ( 32 -254 88 ) ( 32 -254 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 16 -4 88 ) ( 16 74 88 ) ( 16 74 72 ) clip_player 64 64 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8 194 88 ) ( 6 194 88 ) ( 6 194 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 14 74 88 ) ( 14 -4 88 ) ( 14 -4 72 ) clip_player 64 64 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
 }
 // entity 1
 {
+"angles" "90 264.579 -5.42102"
 "script_noteworthy" "jiggle"
 "script_fxid" "large_ceiling_dust"
 "script_firefx" "poltergeist"
 "targetname" "debris1"
 "spawnflags" "1"
-"origin" "8.0 16.0 80.0"
+"origin" "40.0 192.0 80.0"
 "script_linkto" "1"
-"model" "foliage_cod5_pine_branch01_bare"
+"model" "foliage_cod5_tree_burnt_04"
 "classname" "script_model"
 }
 // entity 2
 {
-"origin" "8.0 8.0 24.0"
+"origin" "8.0 8.0 -120.0"
 "script_linkname" "1"
 "classname" "script_struct"
 }
@@ -31,18 +43,11 @@ iwmap 4
 "classname" "trigger_use"
 // brush 0
 {
- ( -16 16 72 ) ( -24 16 72 ) ( -24 0 72 ) trigger 64 64 -40 0 0 0 lightmap_gray 16384 16384 -40 0 0 0
- ( -24 8 152 ) ( -24 24 152 ) ( -16 24 152 ) trigger 64 64 -40 0 0 0 lightmap_gray 16384 16384 -40 0 0 0
- ( -24 -64 72 ) ( -16 -64 72 ) ( -16 -64 64 ) trigger 64 64 -40 -40 0 0 lightmap_gray 16384.014 16384 -40 -40 0 0
- ( 0 0 88 ) ( 0 16 88 ) ( 0 16 80 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
- ( -16 72 72 ) ( -24 72 72 ) ( -24 72 64 ) trigger 64 64 -40 -40 0 0 lightmap_gray 16384 16384.023 -40 -40 0 0
- ( -24 16 72 ) ( -24 0 72 ) ( -24 0 64 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
+ ( -44 16 72 ) ( -52 16 72 ) ( -52 0 72 ) trigger 64 64 -68 0 0 0 lightmap_gray 16384 16384 -68 0 0 0
+ ( -52 8 152 ) ( -52 24 152 ) ( -44 24 152 ) trigger 64 64 -68 0 0 0 lightmap_gray 16384 16384 -68 0 0 0
+ ( -56 -276 72 ) ( -48 -276 72 ) ( -48 -276 64 ) trigger 64 64 -68 -40 0 0 lightmap_gray 16384.018 16384 -68 -40 0 0
+ ( 12 16 88 ) ( 12 32 88 ) ( 12 32 80 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
+ ( -56 196 72 ) ( -64 196 72 ) ( -64 196 64 ) trigger 64 64 -68 -40 0 0 lightmap_gray 16384 16384.031 -68 -40 0 0
+ ( -28 24 72 ) ( -28 8 72 ) ( -28 8 64 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16383.992 0 -40 0 0
 }
-}
-// entity 4
-{
-"origin" "-8.0 80.0 64.0"
-"export" "1"
-"model" "char_ger_wrmcht_fullbody1"
-"classname" "actor_axis_zombie_ger_ber_sshonor"
 }
