@@ -1,0 +1,53 @@
+iwmap 4
+"000_Global" flags  active
+"The Map" flags 
+// entity 0
+{
+"targetname" "debris1"
+"script_linkto" "1"
+"classname" "worldspawn"
+// brush 0
+{
+ ( 16 74 72 ) ( 14 74 72 ) ( 14 -4 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 14 -4 152 ) ( 14 74 152 ) ( 16 74 152 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 30 -254 88 ) ( 32 -254 88 ) ( 32 -254 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 16 -4 88 ) ( 16 74 88 ) ( 16 74 72 ) clip_player 64 64 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 8 194 88 ) ( 6 194 88 ) ( 6 194 72 ) clip_player 64 64 16 0 0 0 lightmap_gray 16384 16384 16 0 0 0
+ ( 14 74 88 ) ( 14 -4 88 ) ( 14 -4 72 ) clip_player 64 64 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+}
+// entity 1
+{
+"angles" "90 264.579 -5.42102"
+"script_noteworthy" "jiggle"
+"script_fxid" "large_ceiling_dust"
+"script_firefx" "poltergeist"
+"targetname" "debris1"
+"spawnflags" "1"
+"origin" "40.0 192.0 80.0"
+"script_linkto" "1"
+"model" "foliage_cod5_tree_burnt_04"
+"classname" "script_model"
+}
+// entity 2
+{
+"origin" "8.0 8.0 -120.0"
+"script_linkname" "1"
+"classname" "script_struct"
+}
+// entity 3
+{
+"target" "debris1"
+"zombie_cost" "1500"
+"targetname" "zombie_debris"
+"classname" "trigger_use"
+// brush 0
+{
+ ( -44 16 72 ) ( -52 16 72 ) ( -52 0 72 ) trigger 64 64 -68 0 0 0 lightmap_gray 16384 16384 -68 0 0 0
+ ( -52 8 152 ) ( -52 24 152 ) ( -44 24 152 ) trigger 64 64 -68 0 0 0 lightmap_gray 16384 16384 -68 0 0 0
+ ( -56 -276 72 ) ( -48 -276 72 ) ( -48 -276 64 ) trigger 64 64 -68 -40 0 0 lightmap_gray 16384.018 16384 -68 -40 0 0
+ ( 12 16 88 ) ( 12 32 88 ) ( 12 32 80 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16384 0 -40 0 0
+ ( -56 196 72 ) ( -64 196 72 ) ( -64 196 64 ) trigger 64 64 -68 -40 0 0 lightmap_gray 16384 16384.031 -68 -40 0 0
+ ( -28 24 72 ) ( -28 8 72 ) ( -28 8 64 ) trigger 64 64 0 -40 0 0 lightmap_gray 16384 16383.992 0 -40 0 0
+}
+}
