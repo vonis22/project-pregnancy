@@ -1,0 +1,92 @@
+iwmap 4
+"000_Global" flags  active
+"The Map" flags 
+// entity 0
+{
+"classname" "worldspawn"
+// brush 0
+{
+  contents detail;
+ ( 26 4 96 ) ( -26 4 96 ) ( -26 -4 96 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -36 0 99 ) ( -36 320 99 ) ( 28 320 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 -4 96 ) ( -26 -4 96 ) ( -29 -4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 4 96 ) ( 26 4 96 ) ( 29 4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 24 4 94 ) ( 28 4 98 ) ( 28 36 98 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -28 4 98 ) ( -24 4 94 ) ( -24 36 94 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 1
+{
+  contents detail;
+ ( 32 320 0 ) ( -32 320 0 ) ( -32 0 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 -4 0 ) ( 26 -4 96 ) ( 29 -4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 29 0 96 ) ( 29 320 96 ) ( 29 320 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 4 96 ) ( 26 4 0 ) ( 29 4.5 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 -4 96 ) ( 26 -4 0 ) ( 26 4 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 48 561.5 48 ) ( 0 561.5 48 ) ( 48 593.5 48 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 2
+{
+  contents detail;
+ ( 26 -4 0 ) ( 26 -4 96 ) ( 29 -4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 29 0 96 ) ( 29 320 96 ) ( 29 320 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 4 96 ) ( 26 4 0 ) ( 29 4.5 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 26 -4 96 ) ( 26 -4 0 ) ( 26 4 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 28 4 98 ) ( 24 4 94 ) ( 28 36 98 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 0 561.5 48 ) ( 48 561.5 48 ) ( 48 593.5 48 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 3
+{
+  contents detail;
+ ( 32 320 0 ) ( -32 320 0 ) ( -32 0 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 -4 96 ) ( -26 -4 0 ) ( -29 -4.5 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 4 0 ) ( -26 4 96 ) ( -29 4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -29 320 96 ) ( -29 0 96 ) ( -29 0 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 -4 0 ) ( -26 -4 96 ) ( -26 4 96 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( 0 4.5 48 ) ( -48 4.5 48 ) ( 0 36.5 48 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+// brush 4
+{
+  contents detail;
+ ( -26 -4 96 ) ( -26 -4 0 ) ( -29 -4.5 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 4 0 ) ( -26 4 96 ) ( -29 4.5 99 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -29 320 96 ) ( -29 0 96 ) ( -29 0 0 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -26 -4 0 ) ( -26 -4 96 ) ( -26 4 96 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -22 4 92 ) ( -28 4 98 ) ( -28 36 98 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+ ( -48 4.5 48 ) ( 0 4.5 48 ) ( 0 36.5 48 ) okinawa_wall_concrete_grey_cracks_wet 128 128 0 0 0 0 lightmap_gray 16384 16384 0 0 0 0
+}
+}
+// entity 1
+{
+"script_noteworthy" "jiggle"
+"script_fxid" "large_ceiling_dust"
+"targetname" "debris3"
+"spawnflags" "1"
+"script_linkto" "3"
+"angles" "66.4 180 -180"
+"model" "dest_reichtstag_bench_base_dmg0"
+"origin" "-9.5 3.0 43.5"
+"classname" "script_model"
+}
+// entity 2
+{
+"target" "debris3"
+"zombie_price" "2000"
+"targetname" "zombie_debris"
+"classname" "trigger_use"
+// brush 0
+{
+ ( -25 16 57 ) ( -29 16 57 ) ( -29 -16 57 ) trigger 64 64 -10 3 0 0 lightmap_gray 16384 16384 -10 3 0 0
+ ( -26 -46 76 ) ( -26 -14 76 ) ( -22 -14 76 ) trigger 64 64 -10 3 0 0 lightmap_gray 16383.994 16384 -10 3 0 0
+ ( -7 -16 28 ) ( -3 -16 28 ) ( -3 -16 25 ) trigger 64 64 -10 -37 0 0 lightmap_gray 16384 16383.973 -10 -37 0 0
+ ( 9 -16 22 ) ( 9 16 22 ) ( 9 16 19 ) trigger 64 64 -3 -37 0 0 lightmap_gray 16384 16384 -3 -37 0 0
+ ( -2 -12 70 ) ( -6 -12 70 ) ( -6 -12 67 ) trigger 64 64 -10 -37 0 0 lightmap_gray 16384 16384 -10 -37 0 0
+ ( -7 -14 77 ) ( -7 -46 77 ) ( -7 -46 74 ) trigger 64 64 -3 -37 0 0 lightmap_gray 16384 16384 -3 -37 0 0
+}
+}
+// entity 3
+{
+"classname" "script_struct"
+"script_linkname" "3"
+"spawnflags" "0"
+"origin" "-14.5 -8.0 -59.0"
+}
